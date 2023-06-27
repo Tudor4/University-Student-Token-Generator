@@ -36,7 +36,7 @@ pub trait UtgsContract:
 
     #[endpoint]
     #[payable("*")]
-    fn mint_nft(&self, token_name : ManagedBuffer) {
+    fn mint_nft(&self, token_name : ManagedBuffer, recipient: ManagedAddress) {
         let _caller = self.blockchain().get_caller();
         let _current_block = self.blockchain().get_block_epoch();
 
@@ -54,7 +54,7 @@ pub trait UtgsContract:
 
 
         self.send().direct_esdt(
-            &self.blockchain().get_caller(),
+            &recipient,
             &staked_lp_payment.token_identifier,
             staked_lp_payment.token_nonce,
             &staked_lp_payment.amount,
