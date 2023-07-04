@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="Welcome Tudor!"
+        android:layout_marginLeft="120dp"/>
+
+    <EditText
+        android:id="@+id/collection_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Collection name" />
+
+    <EditText
+        android:id="@+id/ticker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Ticker" />
+
+    <Button
+        android:id="@+id/create_collection_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Collection"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/collection_name2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Collection name"/>
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Address" />
+
+    <Button
+        android:id="@+id/create_nft_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create and send NFT"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/address2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/get_nfts_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get NFTs"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
